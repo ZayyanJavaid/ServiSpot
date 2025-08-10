@@ -517,6 +517,7 @@
      border-radius: 10px;
      font-size: 16px;
      outline: none;
+       z-index: 20;
    }
 
    .search-btn {

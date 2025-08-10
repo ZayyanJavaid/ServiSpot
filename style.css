@@ -82,10 +82,10 @@ h3 {
 
 
 
-  .auth-buttons .login {
-        opacity: 0;
-        display: none;
-     }
+.auth-buttons .login {
+    opacity: 0;
+    display: none;
+}
 
 
 
@@ -232,20 +232,30 @@ h3 {
 
 .service-navbar {
     display: flex;
-    justify-content: center;
-    padding: 1rem 5%;
+    justify-content: flex-start;
+    padding: 1rem 2%;
     background-color: #051915;
     overflow-x: auto;
-    gap: 2rem;
-    /* -webkit-overflow-scrolling: touch; */
-    /* scrollbar-width: none; */
-    /* scroll-behavior: smooth; */
+    gap: 1.5rem;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    position: relative;
+    cursor: grab;
+    /* Yeh ek performance improvement hai */
+    will-change: transform;
 }
 
-.extra-padding {
-    padding: 0 -35px;
-    /* Add extra padding to the service link */
+.service-navbar:active {
+    cursor: grabbing;
 }
+
+.service-navbar::-webkit-scrollbar {
+    display: none;
+}
+
+/* Maine .extra-padding class ko hata diya hai */
 
 .service-link {
     display: flex;
@@ -254,7 +264,6 @@ h3 {
     text-decoration: none;
     scroll-behavior: smooth;
     transition: transform 0.3s;
-    /* Remove the color property that was causing white shade */
 }
 
 .service-link:hover {
@@ -1028,11 +1037,11 @@ body {
         text-align: center;
     }
 
-      .auth-buttons .signup {
+    .auth-buttons .signup {
         margin-top: 30px;
-      }
+    }
 
-    
+
 
     .hamburger.active span:nth-child(1) {
         transform: rotate(45deg) translate(8px, 6px);
@@ -1482,6 +1491,7 @@ body {
         border-radius: 10px;
         font-size: 16px;
         outline: none;
+        z-index: 20;
     }
 
     .search-btn {
