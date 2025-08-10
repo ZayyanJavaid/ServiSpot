@@ -233,6 +233,7 @@ h3 {
 .service-navbar {
     display: flex;
     justify-content: center;
+    align-items: center;
     padding: 1rem 2%;
     background-color: #051915;
     overflow-x: auto;
