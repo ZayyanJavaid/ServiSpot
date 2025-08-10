@@ -1,0 +1,447 @@
+// Search functionality for .top-navbar input field
+// This script adds search capability to navigate to specific service cards
+
+// Search data mapping for services
+const searchData = {
+    "plumbing": {
+        keywords: ["plumbing", "plumber", "pipe", "leak", "drain", "faucet", "toilet", "water", "sewer", "plumbing card", "plumbing service repair" , "leaky faucet repair" , "leaking pipe fix" , "clogged drain cleaning" , "toilet repair" , "water heater installation" , "sewer line repair" , "drain cleaning" , "garbage disposal repair" , "sump pump installation"],
+        page: "plumbing.html",
+        cardId: "plumbing-services"
+    },
+    "electrical": {
+        keywords: ["electrical", "electrician", "wiring", "light", "outlet", "switch", "circuit", "electrical card", "electrical service repair" , "wiring repair" , "light fixture installation" , "outlet replacement" , "circuit breaker repair" , "ceiling fan installation" , "electrical panel upgrade" , "lighting installation" , "generator installation" , "surge protector installation" , "repair generator" , "circuit breaker repair" , "home rewiring" , "power outage fix" , "short circuit repair" , "faulty wiring" , "sparking outlet"],
+        page: "electrical.html",
+        cardId: "electrical-services"
+    },
+    "house cleaning": {
+        keywords: ["house cleaning", "cleaning", "maid", "housekeeper", "clean", "tidy", "house cleaning card", "cleaning service" , "housekeeping service", "deep cleaning", "carpet cleaning", "window washing", "post-construction cleaning", "move-in/move-out cleaning", "office cleaning", "janitorial service", "spring cleaning", "disinfection service"],
+        page: "house-cleaning.html",
+        cardId: "cleaning-services"
+    },
+    "bike repair": {
+        keywords: ["bike repair", "bicycle", "cycle", "bike", "repair", "tire", "bike repair card", "bicycle service" , "bike maintenance", "flat tire repair", "brake adjustment", "gear tuning", "chain replacement", "wheel truing", "bike assembly", "bike fitting", "bike cleaning", "bike tune-up"],
+        page: "bike-repair.html",
+        cardId: "bike-repair-services"
+    },
+    "carpentry": {
+        keywords: ["carpentry", "carpenter", "wood", "furniture", "cabinet", "carpentry card", "woodwork service" , "furniture assembly", "cabinet installation", "shelving", "deck building", "fence installation", "custom woodwork", "door installation", "window framing", "wood repair", "trim work", "wooden furniture restoration"],
+        page: "carpentry.html",
+        cardId: "carpentry-services"
+    },
+    "car repair": {
+        keywords: ["car repair", "automobile", "mechanic", "auto", "vehicle", "car repair card", "automotive service" , "engine repair", "brake service", "oil change", "tire rotation", "transmission repair", "battery replacement", "exhaust system repair", "suspension service", "cooling system repair", "car diagnostics", "vehicle maintenance"],
+        page: "car-repair.html",
+        cardId: "car-repair-services"
+    },
+    "moving": {
+        keywords: ["moving", "move", "movers", "relocation", "packing", "moving card", "moving service" , "local moving", "long-distance moving", "packing service", "unpacking service", "furniture assembly", "storage solutions", "office relocation", "residential moving", "piano moving", "appliance moving", "heavy item moving", "moving truck rental"],
+        page: "moving.html",
+        cardId: "moving-services"
+    },
+    "appliance": {
+        keywords: ["appliance", "appliances", "fridge", "washing machine", "dryer", "appliance card", "appliance repair" , "toilet installation" , "sink installation" , "bathtub repair" , "shower head replacement" , "water softener installation" , "garbage disposal installation" , "dishwasher repair" , "water heater repair" , "faucet installation" , "pipe insulation", "appliance installation", "appliance maintenance", "appliance troubleshooting"],
+        page: "appliance.html",
+        cardId: "appliance-services"
+    }
+};
+
+// Function to find matching service
+function findMatchingService(query) {
+    const lowerQuery = query.toLowerCase().trim();
+    
+    for (const [serviceKey, service] of Object.entries(searchData)) {
+        for (const keyword of service.keywords) {
+            if (lowerQuery.includes(keyword.toLowerCase())) {
+                return service;
+            }
+        }
+    }
+    
+    return null;
+}
+
+// Function to perform search
+function performSearch(query) {
+    const service = findMatchingService(query);
+    
+    if (service) {
+        // Navigate to the service page with the card ID as anchor
+        const targetUrl = `${service.page}#${service.cardId}`;
+        window.location.href = targetUrl;
+    } else {
+        // Show no results message
+        alert("No matching service found. Please try different keywords like 'plumbing', 'electrical', 'cleaning', etc.");
+    }
+}
+
+// Initialize search functionality
+function initializeSearch() {
+    // Desktop search
+    const desktopSearchInput = document.querySelector('.search-box input[type="text"]');
+    const desktopSearchBtn = document.querySelector('.search-icon');
+    
+    // Mobile search
+    const mobileSearchInput = document.querySelector('.mobile-search input[type="text"]');
+    const mobileSearchBtn = document.querySelector('.search-btn');
+    
+    // Function to handle search
+    function handleSearch(input) {
+        const query = input.value.trim();
+        if (query) {
+            performSearch(query);
+        }
+    }
+    
+    // Event listeners for desktop
+    if (desktopSearchInput) {
+        desktopSearchInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                handleSearch(desktopSearchInput);
+            }
+        });
+    }
+    
+    if (desktopSearchBtn) {
+        desktopSearchBtn.addEventListener('click', () => {
+            if (desktopSearchInput) {
+                handleSearch(desktopSearchInput);
+            }
+        });
+    }
+    
+    // Event listeners for mobile
+    if (mobileSearchInput) {
+        mobileSearchInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                handleSearch(mobileSearchInput);
+            }
+        });
+    }
+    
+    if (mobileSearchBtn) {
+        mobileSearchBtn.addEventListener('click', () => {
+            if (mobileSearchInput) {
+                handleSearch(mobileSearchInput);
+            }
+        });
+    }
+}
+
+// Initialize search when DOM is loaded
+document.addEventListener('DOMContentLoaded', () => {
+    initializeSearch();
+    
+    // Add IDs to service sections on service pages
+    addServiceSectionIDs();
+});
+
+// Function to add IDs to service sections on service pages
+function addServiceSectionIDs() {
+    const currentPage = window.location.pathname.split('/').pop();
+    
+    // Map pages to their service section IDs
+    const pageServiceMap = {
+        'plumbing.html': 'plumbing-services',
+        'electrical.html': 'electrical-services',
+        'house-cleaning.html': 'cleaning-services',
+        'bike-repair.html': 'bike-repair-services',
+        'carpentry.html': 'carpentry-services',
+        'car-repair.html': 'car-repair-services',
+        'moving.html': 'moving-services',
+        'appliance.html': 'appliance-services'
+    };
+    
+    // Add ID to the main service section on each page
+    if (pageServiceMap[currentPage]) {
+        const serviceSection = document.querySelector('.service-section') || 
+                              document.querySelector('.services-section') || 
+                              document.querySelector('.main-content');
+        if (serviceSection && !serviceSection.id) {
+            serviceSection.id = pageServiceMap[currentPage];
+        }
+    }
+}
+
+// Scroll to specific service card when page loads with hash
+window.addEventListener('load', () => {
+    if (window.location.hash) {
+        const targetId = window.location.hash.substring(1);
+        const targetElement = document.getElementById(targetId);
+        
+        if (targetElement) {
+            setTimeout(() => {
+                targetElement.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }, 100);
+        }
+    }
+});
+
+// Include the search data and functions in the main script
+// This will be loaded after the main script.js
+
+
+
+
+
+
+
+
+
+// Add smooth scroll for service navbar
+const serviceNavbar = document.querySelector('.service-navbar');
+let isDown = false;
+let startX;
+let scrollLeft;
+
+serviceNavbar.addEventListener('mousedown', (e) => {
+    isDown = true;
+    startX = e.pageX - serviceNavbar.offsetLeft;
+    scrollLeft = serviceNavbar.scrollLeft;
+});
+
+serviceNavbar.addEventListener('mouseleave', () => {
+    isDown = false;
+});
+
+serviceNavbar.addEventListener('mouseup', () => {
+    isDown = false;
+});
+
+serviceNavbar.addEventListener('mousemove', (e) => {
+    if (!isDown) return;
+    e.preventDefault();
+    const x = e.pageX - serviceNavbar.offsetLeft;
+    const walk = (x - startX);
+    serviceNavbar.scrollLeft = scrollLeft - walk;
+});
+
+// Add touch scroll support
+serviceNavbar.addEventListener('touchstart', (e) => {
+    startX = e.touches[0].pageX - serviceNavbar.offsetLeft;
+    scrollLeft = serviceNavbar.scrollLeft;
+});
+
+serviceNavbar.addEventListener('touchmove', (e) => {
+    if (!startX) return;
+    const x = e.touches[0].pageX - serviceNavbar.offsetLeft;
+    const walk = (x - startX);
+    serviceNavbar.scrollLeft = scrollLeft - walk;
+});
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const hamburger = document.querySelector('.hamburger');
+    const authButtons = document.querySelector('.auth-buttons');
+    const loginButton = document.querySelector('.login');
+    const signupButton = document.querySelector('.signup');
+    
+    // Ensure both buttons are initially visible in the auth-buttons container
+    loginButton.style.display = 'block';
+    signupButton.style.display = 'block';
+    
+    hamburger.addEventListener('click', function() {
+        this.classList.toggle('active');
+        authButtons.classList.toggle('show');
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', function(e) {
+        if (!hamburger.contains(e.target) && !authButtons.contains(e.target)) {
+            hamburger.classList.remove('active');
+            authButtons.classList.remove('show');
+        }
+    });
+});
+
+
+
+
+// Add search functionality for mobile search
+
+// Update search functionality for mobile search
+document.addEventListener('DOMContentLoaded', function() {
+    const searchIcon = document.querySelector('.search-icon');
+    const mobileSearch = document.querySelector('.mobile-search');
+    let isSearchOpen = false;
+
+    searchIcon.addEventListener('click', function(e) {
+        e.stopPropagation();
+        isSearchOpen = !isSearchOpen;
+        
+        // Toggle visibility with smooth transition
+        if (isSearchOpen) {
+            mobileSearch.style.display = 'block';
+            // Use setTimeout to ensure display:block is applied before adding active class
+            setTimeout(() => {
+                mobileSearch.classList.add('active');
+                document.querySelector('.scnd-search-box').focus();
+            }, 10);
+        } else {
+            mobileSearch.classList.remove('active');
+            // Wait for transition to complete before hiding
+            setTimeout(() => {
+                mobileSearch.style.display = 'none';
+            }, 300); // Match this with CSS transition duration
+        }
+    });
+
+    // Close search when clicking outside
+    document.addEventListener('click', function(e) {
+        if (isSearchOpen && !mobileSearch.contains(e.target) && !searchIcon.contains(e.target)) {
+            isSearchOpen = false;
+            mobileSearch.classList.remove('active');
+            setTimeout(() => {
+                mobileSearch.style.display = 'none';
+            }, 200);
+        }
+    });
+
+    // Prevent search from closing when clicking inside
+    mobileSearch.addEventListener('click', function(e) {
+        e.stopPropagation();
+    });
+});
+
+
+
+// Mobile search show/hide with transition
+document.addEventListener('DOMContentLoaded', function() {
+  const searchIcon = document.querySelector('.search-icon');
+  const searchWrapper = document.querySelector('.mobile-search .search-wrapper');
+  // For color toggle
+  function toggleMobileSearch() {
+    searchIcon.classList.toggle('active');
+    searchWrapper.classList.toggle('active');
+  }
+  if (searchIcon && searchWrapper) {
+    searchIcon.addEventListener('click', toggleMobileSearch);
+    // Optional: Hide search on outside click
+    document.addEventListener('click', function(e) {
+      if (
+        searchWrapper.classList.contains('active') &&
+        !searchWrapper.contains(e.target) &&
+        !searchIcon.contains(e.target)
+      ) {
+        searchWrapper.classList.remove('active');
+        searchIcon.classList.remove('active');
+      }
+    });
+  }
+});
+
+
+
+
+
+ const cardContents = document.querySelectorAll('.animation');
+    const reveal = () => {
+        cardContents.forEach(content => {
+            const rect = content.getBoundingClientRect();
+            if (rect.top < window.innerHeight - 40) {
+                content.classList.add('visible');
+            }
+        });
+    };
+    reveal();
+    window.addEventListener('scroll', reveal);
+
+
+    async function fetchData() {
+  let response = await fetch("moving.json");
+  let data = await response.json();
+
+  let cardsHTML = '';
+  data.forEach((card, index) => {
+    cardsHTML += `
+      <div class="card ${index >= 4 ? 'hidden' : ''}">
+        <img src="${card.img}" alt="${card.name}" / class="card-img">
+        <div class="card-content">
+          <h3>${card.name}</h3>
+          <p>${card.content}</p>
+        </div>
+      </div>
+    `;
+  });
+
+  document.getElementById("cardsContainer").innerHTML = cardsHTML;
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  fetchData().then(() => {
+    const viewMoreBtn = document.getElementById('viewMoreBtn');
+    const cardsContainer = document.getElementById('cardsContainer');
+    let showingAll = false;
+
+    viewMoreBtn.addEventListener('click', () => {
+      const cards = cardsContainer.querySelectorAll('.card');
+      if (!showingAll) {
+        // Show all cards with transition
+        cards.forEach(card => {
+          card.classList.remove('hidden');
+          card.classList.add('visible');
+        });
+        viewMoreBtn.textContent = 'View Hide';
+        showingAll = true;
+      } else {
+        // Hide cards beyond first 4 with transition
+        cards.forEach((card, index) => {
+          if (index >= 4) {
+            card.classList.add('hidden');
+            card.classList.remove('visible');
+          }
+        });
+        viewMoreBtn.textContent = 'View More';
+        showingAll = false;
+      }
+    });
+  });
+});
+
+
+
+
+
+
+// DARK MODE - Persistent across pages using localStorage
+function initDarkMode() {
+    const toggleBtn = document.getElementById('dark-mode-toggle');
+    const icon = document.getElementById('theme-icon');
+    
+    if (!toggleBtn || !icon) return;
+
+    // Load saved theme preference
+    const savedTheme = localStorage.getItem('darkMode');
+    const isDarkMode = savedTheme === 'enabled';
+    
+    // Apply saved theme
+    if (isDarkMode) {
+        document.body.classList.add('dark-mode');
+        icon.classList.remove('fa-sun');
+        icon.classList.add('fa-moon');
+    } else {
+        document.body.classList.remove('dark-mode');
+        icon.classList.remove('fa-moon');
+        icon.classList.add('fa-sun');
+    }
+
+    // Toggle theme and save preference
+    toggleBtn.addEventListener('click', () => {
+        const isDark = document.body.classList.toggle('dark-mode');
+        
+        if (isDark) {
+            icon.classList.remove('fa-sun');
+            icon.classList.add('fa-moon');
+            localStorage.setItem('darkMode', 'enabled');
+        } else {
+            icon.classList.remove('fa-moon');
+            icon.classList.add('fa-sun');
+            localStorage.setItem('darkMode', 'disabled');
+        }
+    });
+}
+
+// Initialize dark mode on page load
+document.addEventListener('DOMContentLoaded', initDarkMode);

@@ -1,0 +1,74 @@
+[
+  {
+    "img": "electrical-img/electrical1.avif",
+    "name": "Wiring & Rewiring",
+    "content": "Wiring & Rewiring services ensure safe, efficient electrical systems—upgrading old wiring or installing new setups to prevent hazards and support your home’s power needs reliably."
+     
+  },
+  {
+    "img": "electrical-img/electrical3.png",
+    "name": "Socket & Switch Replacment",
+    "content": "Socket & Switch Replacement upgrades outdated or faulty fixtures—enhancing safety, functionality, and aesthetics while ensuring smooth electrical connections throughout your home or office."
+   
+  },
+  {
+    "img": "electrical-img/electrical2.png",
+    "name": "Lighting Installation & Repair",
+    "content": "Lighting Installation & Repair enhances your space with efficient, stylish lighting solutions—installing new fixtures or fixing existing ones to brighten your home or workplace perfectly."
+    
+  },
+  {
+    "img": "electrical-img/electrical4.png",
+    "name": "Ceiling Fan Installation",
+    "content": "Ceiling Fan Installation ensures proper setup of fans for optimal airflow—providing cool, comfortable living spaces with safe, efficient, and professionally installed ceiling fans."
+   
+  },
+  {
+    "img": "electrical-img/electrical5.jpg",
+    "name": "Circuit Breaker & Fuse Box Upgrades",
+    "content": "Circuit Breaker & Fuse Box Upgrades enhance electrical safety—preventing overloads and faults by installing modern, reliable systems tailored to protect your home and appliances effectively."
+ 
+  },
+  {
+    "img": "electrical-img/electrical6.jpg",
+    "name": "Electrical Safety Inspections",
+    "content": "Electrical Safety Inspections thoroughly assess your wiring and systems—identifying risks and ensuring compliance with safety standards to protect your home and prevent electrical hazards."
+ 
+  },
+  {
+    "img": "electrical-img/electrical7.jpg",
+    "name": "Smart Home Automation",
+    "content": "Smart Home Automation integrates advanced technology to control lighting, security, and appliances—offering convenience, energy efficiency, and enhanced comfort at your fingertips anytime, anywhere."
+ 
+  },
+  {
+    "img": "electrical-img/electrical8.jpg",
+    "name": "Solar Panel Installation",
+    "content": "Solar Panel Installation provides clean, renewable energy solutions—professionally installing panels to reduce electricity bills and carbon footprint while powering your home sustainably and efficiently."
+     
+  },
+  {
+    "img": "electrical-img/electrical9.jpg",
+    "name": "UPS & Generator Setup",
+    "content": "UPS & Generator Setup ensures uninterrupted power supply—keeping your home or business running smoothly during outages with reliable backup systems designed for efficiency and peace of mind."
+    
+  },
+  {
+    "img": "electrical-img/electrical10.png",
+    "name": "General Electrical Maintenance",
+    "content": "General Electrical Maintenance keeps your electrical systems running smoothly—regular inspections and repairs prevent issues, enhance safety, and ensure reliable power for your home or business."
+  
+  },
+  {
+    "img": "electrical-img/electrical11.jpg",
+    "name": "Network & Data Cabling",
+    "content": "Network & Data Cabling provides fast, reliable connections—installing organized, high-quality cables to support seamless internet, communication, and data transfer for your home or office."
+   
+  },
+  {
+    "img": "electrical-img/electrical12.png",
+    "name": "Thermostat & Climate Control Setup",
+    "content": "Thermostat & Climate Control Setup installs and configures systems to maintain perfect indoor temperatures—enhancing comfort, energy efficiency, and easy control of your home’s climate year-round."
+ 
+  }
+]

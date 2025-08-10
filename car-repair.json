@@ -1,0 +1,74 @@
+[
+  {
+    "img": "car-repair-img/car-repair1.png",
+    "name": "General Maintenance",
+    "content": "We provide complete General Maintenance services to keep your vehicle running smoothly. From routine checks to minor fixes, we ensure your car stays reliable, safe, and road-ready."
+     
+  },
+  {
+    "img": "car-repair-img/car-repair2.png",
+    "name": "Oil Change & Fluids",
+    "content": "Our Oil Change & Fluids service ensures your engine runs efficiently. We use high-quality oils and top up essential fluids to maintain performance, reduce wear, and extend engine life."
+   
+  },
+  {
+    "img": "car-repair-img/car-repair3.png",
+    "name": "Battery Replacement",
+    "content": "We offer fast and reliable Battery Replacement services. Our technicians test, replace, and install batteries to keep your car starting strong and your electrical systems functioning perfectly."
+    
+  },
+  {
+    "img": "car-repair-img/car-repair4.png",
+    "name": "Diagnostics & Inspection",
+    "content": "Our advanced Diagnostics & Inspection service detects issues early. We use modern tools to scan systems, identify problems, and recommend timely solutions to avoid costly repairs later."
+   
+  },
+  {
+    "img": "car-repair-img/car-repair5.png",
+    "name": "Engine & Transmission Repair",
+    "content": "We handle complex Engine & Transmission Repairs with expertise. Whether it’s performance issues or full rebuilds, our skilled team ensures your vehicle runs with power and reliability."
+ 
+  },
+  {
+    "img": "car-repair-img/car-repair6.png",
+    "name":  "Accident & Body Repair",
+    "content": "We provide professional Accident & Body Repair services to restore your vehicle’s look and structure. From dent removal to full repainting, we bring your car back to life."
+ 
+  },
+  {
+    "img": "car-repair-img/car-repair7.png",
+    "name": "Brake & Suspension",
+    "content": "Our Brake & Suspension services focus on safety and comfort. We inspect, repair, and replace components to ensure stable handling, smooth rides, and reliable stopping power."
+ 
+  },
+  {
+    "img": "car-repair-img/car-repair8.png",
+    "name": "AC & Cooling System",
+    "content": "Stay comfortable with our AC & Cooling System services. We check and repair your air conditioning and cooling systems to prevent overheating and ensure a pleasant driving experience."
+     
+  },
+  {
+    "img": "car-repair-img/car-repair9.png",
+    "name": "Electrical & Lighting",
+    "content": "We fix Electrical & Lighting issues efficiently, from wiring faults to bulb replacements. Our experts ensure your car’s electronics are fully functional and your lighting is safe and clear."
+    
+  },
+  {
+    "img": "car-repair-img/car-repair10.png",
+    "name": "Fuel System Service",
+    "content": "Our Fuel System Service improves mileage and engine performance. We clean injectors, inspect pumps, and remove build-up to ensure efficient fuel delivery and smooth engine operation."
+  
+  },
+  {
+    "img": "car-repair-img/car-repair11.png",
+    "name": "Tire & Wheel Services",
+    "content": "We offer complete Tire & Wheel Services including rotation, alignment, and replacement. Our services improve handling, extend tire life, and enhance safety on every journey."
+   
+  },
+  {
+    "img": "car-repair-img/car-repair12.png",
+    "name": "Preventive Maintenance",
+    "content": "Our Preventive Maintenance keeps your vehicle in peak condition. Regular servicing helps detect potential issues early, reduces breakdowns, and extends your car’s overall lifespan and performance."
+ 
+  }
+]

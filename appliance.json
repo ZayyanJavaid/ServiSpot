@@ -1,0 +1,74 @@
+[
+  {
+    "img": "appliance-img/appliance1.png",
+    "name": "Refrigerator Repair",
+    "content": "We offer expert Refrigerator Repair services to restore cooling and performance. From minor issues to major faults, our technicians ensure quick, reliable fixes using quality parts and trusted techniques."
+     
+  },
+  {
+    "img": "appliance-img/appliance2.png",
+    "name": "Washing Machine Repair",
+    "content": "We provide reliable Washing Machine Repair services for all models. Whether it's drainage, spinning, or power issues, our skilled technicians diagnose and fix problems to get your appliance running smoothly."
+   
+  },
+  {
+    "img": "appliance-img/appliance3.png",
+    "name": "Microwave & Oven Repair",
+    "content": "Our Microwave & Oven Repair services cover all common issues, from heating problems to electrical faults. We ensure safe, efficient repairs to restore full functionality to your kitchen appliances."
+    
+  },
+  {
+    "img": "appliance-img/appliance4.png",
+    "name": "AC & Cooling Appliance Repair",
+    "content": "We offer professional AC & Cooling Appliance Repair services to keep your environment comfortable. Our experts handle all cooling issues with precision, ensuring optimal performance and energy efficiency year-round."
+   
+  },
+  {
+    "img": "appliance-img/appliance5.png",
+    "name": "TV & Display Repair",
+    "content": "We provide expert TV & Display Repair services for all screen types. Whether it's sound, display, or power issues, our technicians restore clear visuals and smooth performance with care."
+ 
+  },
+  {
+    "img": "appliance-img/appliance6.png",
+    "name":  "Mixer & Small Appliance Repair",
+    "content": "We offer reliable Mixer & Small Appliance Repair services to extend the life of your everyday devices. Our technicians ensure quick, safe fixes using quality parts and expert care."
+ 
+  },
+  {
+    "img": "appliance-img/appliance7.png",
+    "name": "Electrical Appliance Repair",
+    "content": "We provide trusted Electrical Appliance Repair services for a wide range of household devices. Our experienced team diagnoses and fixes faults efficiently, ensuring safe, long-lasting performance and user satisfaction."
+ 
+  },
+  {
+    "img": "appliance-img/appliance8.png",
+    "name": "Fan & Cooler Repair",
+    "content": "We offer fast and efficient Fan & Cooler Repair services to restore proper airflow and cooling. Our technicians fix all types of issues, ensuring comfort and smooth operation during hot days."
+     
+  },
+  {
+    "img": "appliance-img/appliance9.png",
+    "name": "Geyser & Water Heater Repair",
+    "content": "We provide reliable Geyser & Water Heater Repair services to ensure consistent hot water supply. Our skilled technicians handle heating issues, leaks, and more—restoring safety, efficiency, and comfort quickly"
+    
+  },
+  {
+    "img": "appliance-img/appliance10.png",
+    "name": "Dishwasher Repair",
+    "content": "We offer expert Dishwasher Repair services to fix leaks, drainage, and performance issues. Our technicians ensure your appliance operates efficiently, saving you time and maintaining spotless dishes every cycle."
+  
+  },
+  {
+    "img": "appliance-img/appliance11.png",
+    "name": "Preventive Maintenance",
+    "content": "Our Preventive Maintenance services keep your appliances in peak condition. Regular checks and tune-ups help avoid breakdowns, improve efficiency, and extend the lifespan of your essential household devices."
+   
+  },
+  {
+    "img": "appliance-img/appliance12.png",
+    "name": "Inverter & Stabilizer Repair",
+    "content": "We provide expert Inverter & Stabilizer Repair services to ensure uninterrupted power supply and protect your appliances. Our technicians quickly diagnose and fix faults for reliable and efficient operation."
+ 
+  }
+]

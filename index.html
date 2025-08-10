@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/favicon2.jpg" type="image/x-icon">
+    <title>ServiSpot</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="top-navbar" id="home">
+        <div class="logo">
+            <img src="img/logo.png" alt="Logo">
+            <!-- <h1>ServiSpot</h1> -->
+        </div>
+
+        <div class="search-box">
+            <input type="text" placeholder="Search for services...">
+        </div>
+
+        <div class="auth-buttons">
+            
+            <button class="login">Login</button>
+             <button id="dark-mode-toggle" aria-label="Toggle dark mode" title="Toggle dark mode" class="first-icon">
+                <i class="fas fa-sun" id="theme-icon"></i>
+            </button>
+            <a href="sign-in.html"><button class="signup">Sign In</button></a>
+        </div>
+
+
+        <div class="nav-controls">
+            <div class="search-icon">
+                <i class="fas fa-search"></i>
+            </div>
+            
+            <!-- <button id="dark-mode-toggle" aria-label="Toggle dark mode" title="Toggle dark mode" class="mobile-icon">
+                <i class="fas fa-sun" id="theme-icon"></i>
+            </button> -->
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+
+
+
+    <div class="mobile-search">
+        <div class="search-wrapper">
+            <input type="text" placeholder="Search for services..." class="scnd-search-box">
+            <button class="search-btn">Search
+                <!-- <i class="fas fa-search"></i> -->
+            </button>
+        </div>
+    </div>
+
+
+
+
+    <nav class="service-navbar">
+        <a href="#" class="service-link">
+            <img src="img/main-pic.jpg" alt="Plumbing">
+            <span class="service-text active">Home</span>
+        </a>
+        <a href="plumbing.html" class="service-link">
+            <img src="plumbing-img/main-pic.png" alt="Plumbing">
+            <span class="service-text">Plumbing</span>
+        </a>
+        <a href="electrical.html" class="service-link">
+            <img src="electrical-img/main-pic.png" alt="Electrical">
+            <span class="service-text">Electrical</span>
+        </a>
+        <a href="house-cleaning.html" class="service-link extra-padding">
+            <img src="house-cleaning-img/main-pic.png" alt="Cleaning">
+            <span class="service-text">House Cleaning</span>
+        </a>
+        <a href="bike-repair.html" class="service-link">
+            <img src="bike-repair-img/main-pic.png" alt="Painting">
+            <span class="service-text">Bike Repair</span>
+        </a>
+        <a href="carpentry.html" class="service-link">
+            <img src="carpentry-img/main-pic.png" alt="Carpentry">
+            <span class="service-text">Carpentry</span>
+        </a>
+        <a href="car-repair.html" class="service-link">
+            <img src="car-repair-img/main-pic.png" alt="Gardening">
+            <span class="service-text">Cars Repair</span>
+        </a>
+        <a href="moving.html" class="service-link">
+            <img src="moving-img/main-pic.png" alt="Moving">
+            <span class="service-text">Moving</span>
+        </a>
+        <a href="appliance.html" class="service-link">
+            <img src="appliance-img/main-pic.png" alt="Appliance">
+            <span class="service-text">Appliance</span>
+        </a>
+    </nav>
+
+
+
+    <!-- // ...existing navigation code... -->
+
+    <!-- Add this new content after the service-navbar -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <h2 class="animation">Find the Perfect Service Provider</h2>
+            <p class="animation">Connect with trusted professionals for all your home service needs</p>
+            <a href="#" class="cta-button animation">Get Started</a>
+        </div>
+    </section>
+
+
+    <!-- slider section -->
+
+    <div class="slider">
+        <div class="slides">
+            <div class="slide active">
+                <img src="img/bike-repair-slide.png" alt="Bike Repair">
+                <div class="slide-content">
+                    <h2 class="animation">Bike Repair</h2>
+                    <p class="animation">Find expert bike repair services near you.</p>
+                    <p class="animation">Whether it's a flat tire or a full tune-up, our skilled mechanics ensure your
+                        bike is always ready for the road. We use quality parts and offer quick, reliable service so you
+                        can ride with confidence.</p>
+                    <!-- <p>Enjoy hassle-free booking and transparent pricing. Your satisfaction is our priority, and we guarantee a smooth experience from drop-off to pick-up.</p> -->
+                </div>
+            </div>
+            <div class="slide">
+                <img src="img/car-repair-slide.png" alt="Car Repair">
+                <div class="slide-content">
+                    <h2 class="animation">Car Repair</h2>
+                    <p class="animation">Professional car repair and maintenance solutions.</p>
+                    <p class="animation">From engine diagnostics to routine servicing, our certified technicians handle
+                        every job with care and expertise. We keep your car running smoothly and safely, no matter the
+                        make or model.</p>
+                    <!-- <p>Book your appointment online and benefit from our honest advice and competitive rates. We believe in building trust through quality workmanship and customer care.</p> -->
+                </div>
+            </div>
+            <div class="slide">
+                <img src="img/electrical-slide.png" alt="Electrical">
+                <div class="slide-content">
+                    <h2 class="animation">Electrical</h2>
+                    <p class="animation">Certified electricians for all your electrical needs.</p>
+                    <p class="animation">Our experienced electricians are ready to tackle everything from minor repairs
+                        to major installations. Safety and precision are at the heart of every project we undertake.</p>
+                    <!-- <p>We offer prompt service, clear communication, and lasting solutions. Trust us to keep your home or business powered and protected.</p> -->
+                </div>
+            </div>
+            <div class="slide">
+                <img src="img/house-cleaning-slide.png" alt="House Cleaning">
+                <div class="slide-content">
+                    <h2 class="animation">House Cleaning</h2>
+                    <p class="animation">Reliable house cleaning services for a sparkling home.</p>
+                    <p class="animation">Our professional cleaners use eco-friendly products and attention to detail to
+                        make your home shine. We customize our services to fit your schedule and preferences.</p>
+                    <!-- <p>Relax and enjoy a spotless space, knowing our team is committed to quality and your comfort. Book today for a fresh start every time.</p> -->
+                </div>
+            </div>
+            <div class="slide">
+                <img src="img/plumbing-slide.png" alt="Plumbing" class="plumbing-img">
+                <div class="slide-content">
+                    <h2 class="animation">Plumbing</h2>
+                    <p class="animation">Expert plumbing solutions for leaks, repairs, and installations.</p>
+                    <p class="animation">Our licensed plumbers respond quickly to emergencies and routine calls alike.
+                        We fix leaks, unclog drains, and install new fixtures with skill and care.</p>
+                    <!-- <p>Count on us for transparent pricing and guaranteed workmanship. Your comfort and safety are our top priorities, every time.</p> -->
+                </div>
+            </div>
+        </div>
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
+    </div>
+
+    <!-- slider section end  -->
+
+    <!-- popular servixes cards  -->
+
+    <div class="popular-card">
+        <h2 class="section-title">Popular Services Cards </h2>
+        <div class="card-section">
+            <div class="card">
+                <div class="card-img">
+                    <img src="plumbing-img/main-pic.png" alt="" class="img-card">
+                </div>
+                <div class="card-content">
+                    <h3>Plumbing</h3>
+                    <p>Expert plumbing solutions for any issue</p>
+                    <a href="plumbing.html"><button class="popular-service-btn">Click Here</button></a>
+                </div>
+            </div>
+
+
+            <div class="card">
+                <div class="card-img">
+                    <img src="electrical-img/main-pic.png" alt="" class="img-card">
+                </div>
+                <div class="card-content">
+                    <h3>Electrical</h3>
+                    <p>Reliable electrical repair and installation</p>
+                    <a href="electrical.html"><button class="popular-service-btn">Click Here</button></a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-img">
+                    <img src="house-cleaning-img/main-pic.png" alt="" class="custom-width img-card">
+                </div>
+                <div class="card-content">
+                    <h3>House Cleaning</h3>
+                    <p>Professional cleaning services for your home</p>
+                    <a href="house-cleaning.html"><button class="popular-service-btn">Click Here</button></a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-img">
+                    <img src="bike-repair-img/main-pic.png" alt="" class="img-card">
+                </div>
+                <div class="card-content">
+                    <h3>Bike Repair</h3>
+                    <p>Expert bike repair services for all types of bicycles</p>
+                    <a href="bike-repair.html"><button class="popular-service-btn">Click Here</button></a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-img">
+                    <img src="carpentry-img/main-pic.png" alt="" class="img-card">
+                </div>
+                <div class="card-content">
+                    <h3>Carpentry</h3>
+                    <p>Expert carpentry solutions for any project.</p>
+                    <a href="carpentry.html"><button class="popular-service-btn">Click Here</button></a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-img">
+                    <img src="car-repair-img/main-pic.png" alt="" class="img-card">
+                </div>
+                <div class="card-content">
+                    <h3>Car Repair</h3>
+                    <p>Expert car repair services for all makes and models.</p>
+                    <a href="car-repair.html"><button class="popular-service-btn">Click Here</button></a>
+                </div>
+            </div>
+
+
+            <div class="card">
+                <div class="card-img">
+                    <img src="moving-img/main-pic.png" alt="" class="img-card">
+                </div>
+                <div class="card-content">
+                    <h3>Moving</h3>
+                    <p>Professional moving services for your home or office.</p>
+                    <a href="moving.html"><button class="popular-service-btn">Click Here</button></a>
+                </div>
+            </div>
+
+
+            <div class="card margin">
+                <div class="card-img">
+                    <img src="appliance-img/main-pic.png" alt="" class="custom-width img-card">
+                </div>
+                <div class="card-content">
+                    <h3>Appliance</h3>
+                    <p>Expert appliance repair services for all major brands.</p>
+                    <a href="appliance.html"><button class="popular-service-btn">Click Here</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add after featured-services section -->
+
+
+    <!-- Marquree Scroller start -->
+    <marquee behavior="scroll" direction="left" scrollamount="6"
+        style="font-family: Arial, sans-serif; color: white; font-size: 25px; padding: 30px 0px 30px 0px; background-color: #1A4C39; font-weight: bold;">
+        Welcome to ServiSpot — Your all-in-one destination for trusted and professional services. From home maintenance
+        and repairs to cleaning, tech support, and more, we bring quality, convenience, and reliability to your
+        doorstep. At ServiSpot, we believe in making everyday tasks easier, so you can focus on what matters most.
+        Experience service redefined — only at ServiSpot.
+    </marquee>
+
+    <!-- Marquree Scroller end -->
+
+    <section class="service-details" id="services">
+        <h2 class="section-title animation">Our Services</h2>
+        <div class="service-container">
+            <div class="service-item">
+                <i class="fas fa-home animation"></i>
+                <h3 class="animation">Home Cleaning</h3>
+                <p class="animation">Professional cleaning services with trained staff and eco-friendly products.</p>
+            </div>
+            <div class="service-item">
+                <i class="fas fa-wrench animation"></i>
+                <h3 class="animation">Repair Services</h3>
+                <p class="animation">Expert repair services for all your household appliances and systems.</p>
+            </div>
+            <div class="service-item">
+                <i class="fas fa-paint-roller animation"></i>
+                <h3 class="animation">Home Improvement</h3>
+                <p class="animation">Transform your space with our professional renovation services.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-section" id="about">
+        <section class=".about-img " id="about">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="animation">About ServiSpot</h2>
+                    <p class="animation">Service Spot is a reliable and user-friendly platform designed to make everyday
+                        home services simple, fast, and hassle-free. Whether it's plumbing repairs, electrical issues,
+                        deep house cleaning, bike or car maintenance, carpentry work, or help with moving and appliances
+                        — you can book trusted professionals with just a few clicks. Our team of trained and verified
+                        experts ensures every service is delivered with safety, efficiency, and high-quality standards.
+                        At Service Spot, our mission is to bring affordable, dependable home services right to your
+                        doorstep, so you can focus on living — while we take care of the rest.</p>
+                    <div class="achievements">
+                        <div class="achievement-item">
+                            <h3 class="animation">1000+</h3>
+                            <p class="animation">Service Providers</p>
+                        </div>
+                        <div class="achievement-item">
+                            <h3 class="animation">5000+</h3>
+                            <p class="animation">Happy Customers</p>
+                        </div>
+                        <div class="achievement-item">
+                            <h3 class="animation">10+</h3>
+                            <p class="animation">Years Experience</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="img/aboutpic.jpg" alt="About Us" class="about-img">
+                </div>
+            </div>
+        </section>
+    </section>
+
+
+    <section class="contact-section" id="contact">
+        <!-- <img src="img/contactpic.jpg" alt="" class="contact-img"> -->
+        <h2 class="section-title animation">Contact Us</h2>
+        <div class="contact-container left-side-scroll">
+            <div class="contact-info">
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt animation"></i>
+                    <h3 class="animation">Our Location</h3>
+                    <p class="animation">123 Service Street, City, Country</p>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-phone animation"></i>
+                    <h3 class="animation">Phone Number</h3>
+                    <p class="animation">+1 234 567 8900</p>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-envelope animation"></i>
+                    <h3 class="animation">Email Address</h3>
+                    <p class="animation">info@servicefinder.com</p>
+                </div>
+            </div>
+            <div class="contact-form">
+                <form action="https://formspree.io/f/xovllqke" method="POST">
+                    <input type="text" placeholder="Your Name" name="name" class="animation" required>
+                    <input type="email" placeholder="Your Email" name="email" class="animation" required>
+                    <textarea placeholder="Your Message" name="Message" class="animation" required></textarea>
+                    <button type="submit" class="cta-button animation contact-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3 class="animation">Service Finder</h3>
+                <p class="animation">Your trusted platform for professional services</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook animation"></i></a>
+                    <a href="#"><i class="fab fa-twitter animation"></i></a>
+                    <a href="#"><i class="fab fa-instagram animation"></i></a>
+                    <a href="#"><i class="fab fa-linkedin animation"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3 class="animation">Quick Links</h3>
+                <ul>
+                    <li class="animation"><a href="#home">Home</a></li>
+                    <li class="animation"><a href="#services">Services</a></li>
+                    <li class="animation"><a href="#about">About</a></li>
+                    <li class="animation"><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3 class="animation">Popular Services</h3>
+                <ul>
+                    <li class="animation"><a href="#cleaning">Home Cleaning</a></li>
+                    <li class="animation"><a href="#plumbing">Plumbing</a></li>
+                    <li class="animation"><a href="#electrical">Electrical</a></li>
+                    <li class="animation"><a href="#carpentry">Painting</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3 class="animation">Newsletter</h3>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email" class="animation">
+                    <button type="submit" class="animation">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom animation">
+            <p>&copy; 2025 ServiSpot. All rights reserved.</p>
+        </div>
+    </footer>
+
+
+
+
+
+
+    <script src="script.js"></script>
+    <script src="search-script.js"></script>
+    <script src="search-data.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</body>
+
+</html>

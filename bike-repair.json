@@ -1,0 +1,74 @@
+[
+  {
+    "img": "bike-repair-img/bike-repair1.png",
+    "name": "Tune-Up & Maintenance",
+    "content": "We offer professional Tune-Up & Maintenance services—checking brakes, chain, tires, and engine to keep your bike running smoothly, improving performance, fuel efficiency, and overall ride quality."
+     
+  },
+  {
+    "img": "bike-repair-img/bike-repair2.png",
+    "name": "Flat Tire Repair",
+    "content": "We provide fast and reliable Flat Tire Repair—fixing punctures, sealing leaks, and restoring air pressure to get your bike back on the road quickly and safely."
+   
+  },
+  {
+    "img": "bike-repair-img/bike-repair3.png",
+    "name": "Brake & Gear Adjustment",
+    "content": "We offer expert Brake & Gear Adjustment services—ensuring accurate shifting and responsive braking to enhance your bike’s safety, performance, and overall riding comfort."
+    
+  },
+  {
+    "img": "bike-repair-img/bike-repair4.png",
+    "name": "Chain & Drivetrain Service",
+    "content": "We provide professional Chain & Drivetrain Service—thoroughly cleaning, lubricating, and adjusting components to ensure smoother rides, better performance, and longer life for your bike."
+   
+  },
+  {
+    "img": "bike-repair-img/bike-repair5.png",
+    "name": "Wheel Truing & Alignment",
+    "content": "We provide expert Wheel Truing & Alignment services—correcting wheel bends and ensuring perfect alignment for a smooth, safe, and stable riding experience every time you hit the road."
+ 
+  },
+  {
+    "img": "bike-repair-img/bike-repair6.png",
+    "name": "Lubrication & Cleaning",
+    "content": "We offer thorough Lubrication & Cleaning services—keeping your bike’s moving parts well-oiled and clean to reduce wear, prevent rust, and ensure smooth, efficient performance on every ride."
+ 
+  },
+  {
+    "img": "bike-repair-img/bike-repair7.png",
+    "name": "Suspension Service",
+    "content": "We provide professional Suspension Service—inspecting, repairing, and tuning your bike’s suspension system to deliver a smoother, safer ride and improved handling on all terrains."
+ 
+  },
+  {
+    "img": "bike-repair-img/bike-repair8.png",
+    "name": "Custom Upgrades & Accessories",
+    "content": "Enhance your bike with expert Custom Upgrades & Accessories—tailored modifications and premium add-ons designed to boost performance, style, and rider comfort."
+     
+  },
+  {
+    "img": "bike-repair-img/bike-repair9.png",
+    "name": "Safety Checks",
+    "content": "Comprehensive Safety Checks to ensure your bike’s brakes, lights, and controls are functioning perfectly—giving you confidence and peace of mind on every ride."
+    
+  },
+  {
+    "img": "bike-repair-img/bike-repair10.png",
+    "name": "Expert Consultation",
+    "content": "Get professional Expert Consultation for all your bike maintenance and upgrade needs—guiding you to make informed decisions for optimal performance and safety."
+  
+  },
+  {
+    "img": "bike-repair-img/bike-repair11.png",
+    "name": "Complete Overhaul",
+    "content": "Transform your bike with a Complete Overhaul—thorough inspection, repairs, and replacements to restore peak performance, reliability, and extend its lifespan."
+   
+  },
+  {
+    "img": "bike-repair-img/bike-repair12.png",
+    "name": "Engine Diagnostics",
+    "content": "Advanced Engine Diagnostics to identify issues quickly—ensuring your bike runs efficiently, prevents breakdowns, and maintains optimal power and fuel economy."
+
+  }
+]

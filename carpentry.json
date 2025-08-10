@@ -1,0 +1,74 @@
+[
+  {
+    "img": "carpentry-img/carpentry1.png",
+    "name": "Custom Furniture",
+    "content": "We offer high-quality Custom Furniture tailored to your space and style. Each piece is crafted with attention to detail, blending functionality and elegance to perfectly match your unique vision."
+     
+  },
+  {
+    "img": "carpentry-img/carpentry2.png",
+    "name": "Door & Window Installation",
+    "content": "We provide professional Door & Window Installation services. Each fitting is done with precision and durability, enhancing the security and style of your home or office with a perfect finish."
+   
+  },
+  {
+    "img": "carpentry-img/carpentry3.png",
+    "name": "Repair & Restoration",
+    "content": "We specialize in Repair & Restoration services, bringing new life to your old or damaged furniture. Our skilled craftsmanship ensures durability, beauty, and functionality with every restored piece."
+    
+  },
+  {
+    "img": "carpentry-img/carpentry4.png",
+    "name": "Modular Kitchen & Wardrobes",
+    "content": "We design and install stylish Modular Kitchens & Wardrobes that combine smart storage with modern aesthetics. Customized to your needs, our solutions maximize space, functionality, and visual appeal."
+   
+  },
+  {
+    "img": "carpentry-img/carpentry5.png",
+    "name": "Outdoor Carpentry",
+    "content": "We offer expert Outdoor Carpentry services including decks, pergolas, and garden structures. Built to withstand weather, our work enhances your outdoor spaces with durability, elegance, and custom design."
+ 
+  },
+  {
+    "img": "carpentry-img/carpentry6.png",
+    "name":  "Wooden Flooring",
+    "content": "We provide premium Wooden Flooring solutions that add warmth, elegance, and value to your interiors. Installed with precision, our floors are durable, stylish, and crafted to suit every space."
+ 
+  },
+  {
+    "img": "carpentry-img/carpentry7.png",
+    "name": "Polishing & Finishing",
+    "content": "Our Polishing & Finishing services enhance the beauty and durability of your woodwork. We use quality materials and expert techniques to give every piece a smooth, glossy, and long-lasting finish."
+ 
+  },
+  {
+    "img": "carpentry-img/carpentry8.png",
+    "name": "Partition & paneling",
+    "content": "We provide elegant Partition & Paneling solutions to optimize space and enhance interiors. Our custom designs combine functionality with style, creating refined and practical environments for homes and offices."
+     
+  },
+  {
+    "img": "carpentry-img/carpentry9.png",
+    "name": "Cabinet & Shelf Installation",
+    "content": "We offer precise Cabinet & Shelf Installation services tailored to your needs. Our expert team ensures sturdy, stylish, and perfectly fitted storage solutions that organize your space efficiently and beautifully."
+    
+  },
+  {
+    "img": "carpentry-img/carpentry10.png",
+    "name": "Bed & Storage Solutions",
+    "content": "We design and install customized Bed & Storage Solutions that maximize space and comfort. Our smart, durable designs blend functionality with style, making your bedroom organized and cozy."
+  
+  },
+  {
+    "img": "carpentry-img/carpentry11.png",
+    "name": "Chair & Table Repair",
+    "content": "We provide reliable Chair & Table Repair services to restore strength and beauty. Our skilled craftsmen fix damages with care, ensuring your furniture looks and functions like new again."
+   
+  },
+  {
+    "img": "carpentry-img/carpentry12.png",
+    "name": "General Carpentry Maintenance",
+    "content": "We offer comprehensive General Carpentry Maintenance services to keep your woodwork in top condition. Regular upkeep ensures durability, functionality, and aesthetic appeal for all your furniture and fittings."
+ 
+  }
+]

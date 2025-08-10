@@ -1,0 +1,74 @@
+[
+  {
+    "img": "moving-img/moving1.png",
+    "name": "Home Moving",
+    "content": "We provide safe and reliable Home Moving services, ensuring your belongings are packed, transported, and delivered with care. Our trained team makes your move smooth, stress-free, and on time."
+     
+  },
+  {
+    "img": "moving-img/moving2.png",
+    "name": "Office Relocation",
+    "content": "Our Office Relocation services are designed for efficiency and minimal downtime. We handle everything professionally—from packing to setup—so your business transitions smoothly without disrupting daily operations."
+   
+  },
+  {
+    "img": "moving-img/moving3.png",
+    "name": "Packing & Unpacking",
+    "content": "We offer careful Packing & Unpacking services using quality materials and organized methods. Your items are safely handled from start to finish, ensuring a smooth, damage-free moving experience."
+    
+  },
+  {
+    "img": "moving-img/moving4.png",
+    "name": "Furniture Disassembly & Assembly",
+    "content": "We provide expert Furniture Disassembly & Assembly services to ensure safe transport and quick setup. Our team handles each piece with care, preserving its condition and saving you time."
+   
+  },
+  {
+    "img": "moving-img/moving5.png",
+    "name": "Storage Solutions",
+    "content": "We offer secure and flexible Storage Solutions for your short or long-term needs. Our clean, climate-controlled spaces ensure your belongings stay safe, protected, and easily accessible whenever you need them."
+ 
+  },
+  {
+    "img": "moving-img/moving6.png",
+    "name":  "Insurance & Protection",
+    "content": "Our Insurance & Protection services give you peace of mind during your move. We offer coverage options to safeguard your belongings against damage, loss, or unexpected incidents at every step."
+ 
+  },
+  {
+    "img": "moving-img/moving7.png",
+    "name": "Scheduled & Same-Day Moves",
+    "content": "We offer both Scheduled & Same-Day Moves to match your timing and needs. Whether planned in advance or last-minute, our team ensures fast, efficient, and stress-free moving every time."
+ 
+  },
+  {
+    "img": "moving-img/moving8.png",
+    "name": "International Moving",
+    "content": "We provide reliable International Moving services with complete logistics support. From customs handling to safe delivery, our experienced team ensures your belongings reach their global destination securely and on time."
+     
+  },
+  {
+    "img": "moving-img/moving9.png",
+    "name": "Specialty Item Moving",
+    "content": "We offer Specialty Item Moving for delicate, valuable, or oversized belongings. From pianos to artwork, our trained professionals use the right tools and techniques to ensure safe, careful transport."
+    
+  },
+  {
+    "img": "moving-img/moving10.png",
+    "name": "Junk Removal & Disposal",
+    "content": "We provide efficient Junk Removal & Disposal services to clear your space quickly and responsibly. Our team handles unwanted items, ensuring eco-friendly disposal and a clutter-free environment."
+  
+  },
+  {
+    "img": "moving-img/moving11.png",
+    "name": "Route Planning & Logistics",
+    "content": "Our expert Route Planning & Logistics services optimize your move for speed and safety. We coordinate every detail to ensure timely deliveries while minimizing costs and avoiding delays."
+   
+  },
+  {
+    "img": "moving-img/moving12.png",
+    "name": "Last-Mile Delivery",
+    "content": "We specialize in efficient Last-Mile Delivery, ensuring your belongings reach their final destination safely and on time. Our team handles the crucial final step with care and professionalism."
+ 
+  }
+]
