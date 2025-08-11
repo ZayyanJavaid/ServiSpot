@@ -4,42 +4,42 @@
 // Search data mapping for services
 const searchData = {
     "plumbing": {
-        keywords: ["plumbing", "plumber", "pipe", "leak", "drain", "faucet", "toilet", "water", "sewer", "plumbing card", "plumbing service repair"],
+        keywords: ["Plumbing", "Plumber", "Pipe", "Leak", "Drain", "Faucet", "Toilet", "Water", "Sewer", "Plumbing card", "Plumbing service repair", "Leaky faucet repair", "Leaking pipe fix", "Clogged drain cleaning", "Toilet repair", "Water heater installation", "Sewer line repair", "Drain cleaning", "Garbage disposal repair", "Sump pump installation"],
         page: "plumbing.html",
         cardId: "plumbing-services"
     },
     "electrical": {
-        keywords: ["electrical", "electrician", "wiring", "light", "outlet", "switch", "circuit", "electrical card", "electrical service repair"],
+        keywords: ["Electrical", "Electrician", "Wiring", "Light", "Outlet", "Switch", "Circuit", "Electrical card", "Electrical service repair", "Wiring repair", "Light fixture installation", "Outlet replacement", "Circuit breaker repair", "Ceiling fan installation", "Electrical panel upgrade", "Lighting installation", "Generator installation", "Surge protector installation", "Repair generator", "Circuit breaker repair", "Home rewiring", "Power outage fix", "Short circuit repair", "Faulty wiring", "Sparking outlet"],
         page: "electrical.html",
         cardId: "electrical-services"
     },
     "house cleaning": {
-        keywords: ["house cleaning", "cleaning", "maid", "housekeeper", "clean", "tidy", "house cleaning card", "cleaning service"],
+        keywords: ["House cleaning", "Cleaning", "Maid", "Housekeeper", "Clean", "Tidy", "House cleaning card", "Cleaning service", "Housekeeping service", "Deep cleaning", "Carpet cleaning", "Window washing", "Post-construction cleaning", "Move-in/move-out cleaning", "Office cleaning", "Janitorial service", "Spring cleaning", "Disinfection service"],
         page: "house-cleaning.html",
         cardId: "cleaning-services"
     },
     "bike repair": {
-        keywords: ["bike repair", "bicycle", "cycle", "bike", "repair", "tire", "bike repair card", "bicycle service"],
+        keywords: ["Bike repair", "Bicycle", "Cycle", "Bike", "Repair", "Tire", "Bike repair card", "Bicycle service", "Bike maintenance", "Flat tire repair", "Brake adjustment", "Gear tuning", "Chain replacement", "Wheel truing", "Bike assembly", "Bike fitting", "Bike cleaning", "Bike tune-up"],
         page: "bike-repair.html",
         cardId: "bike-repair-services"
     },
     "carpentry": {
-        keywords: ["carpentry", "carpenter", "wood", "furniture", "cabinet", "carpentry card", "woodwork service"],
+        keywords: ["Carpentry", "Carpenter", "Wood", "Furniture", "Cabinet", "Carpentry card", "Woodwork service", "Furniture assembly", "Cabinet installation", "Shelving", "Deck building", "Fence installation", "Custom woodwork", "Door installation", "Window framing", "Wood repair", "Trim work", "Wooden furniture restoration"],
         page: "carpentry.html",
         cardId: "carpentry-services"
     },
     "car repair": {
-        keywords: ["car repair", "automobile", "mechanic", "auto", "vehicle", "car repair card", "automotive service"],
+        keywords: ["Car repair", "Automobile", "Mechanic", "Auto", "Vehicle", "Car repair card", "Automotive service", "Engine repair", "Brake service", "Oil change", "Tire rotation", "Transmission repair", "Battery replacement", "Exhaust system repair", "Suspension service", "Cooling system repair", "Car diagnostics", "Vehicle maintenance"],
         page: "car-repair.html",
         cardId: "car-repair-services"
     },
     "moving": {
-        keywords: ["moving", "move", "movers", "relocation", "packing", "moving card", "moving service"],
+        keywords: ["Moving", "Move", "Movers", "Relocation", "Packing", "Moving card", "Moving service", "Local moving", "Long-distance moving", "Packing service", "Unpacking service", "Furniture assembly", "Storage solutions", "Office relocation", "Residential moving", "Piano moving", "Appliance moving", "Heavy item moving", "Moving truck rental"],
         page: "moving.html",
         cardId: "moving-services"
     },
     "appliance": {
-        keywords: ["appliance", "appliances", "fridge", "washing machine", "dryer", "appliance card", "appliance repair"],
+        keywords: ["Appliance", "Appliances", "Fridge", "Washing machine", "Dryer", "Appliance card", "Appliance repair", "Toilet installation", "Sink installation", "Bathtub repair", "Shower head replacement", "Water softener installation", "Garbage disposal installation", "Dishwasher repair", "Water heater repair", "Faucet installation", "Pipe insulation", "Appliance installation", "Appliance maintenance", "Appliance troubleshooting"],
         page: "appliance.html",
         cardId: "appliance-services"
     }
@@ -162,92 +162,13 @@ function addServiceSectionIDs() {
     }
 }
 
-// Scroll to specific service card when page loads with hash
-window.addEventListener('load', () => {
-    if (window.location.hash) {
-        const targetId = window.location.hash.substring(1);
-        const targetElement = document.getElementById(targetId);
-        
-        if (targetElement) {
-            setTimeout(() => {
-                targetElement.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            }, 100);
-        }
-    }
-});
+// Initialize search when DOM is loaded
+document.addEventListener('DOMContentLoaded', initializeSearch);
 
-// Include the search data and functions in the main script
-// This will be loaded after the main script.js
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// Add smooth scroll for service navbar
-const serviceNavbar = document.querySelector('.service-navbar');
-let isDown = false;
-let startX;
-let scrollLeft;
-
-serviceNavbar.addEventListener('mousedown', (e) => {
-    isDown = true;
-    startX = e.pageX - serviceNavbar.offsetLeft;
-    scrollLeft = serviceNavbar.scrollLeft;
-});
-
-serviceNavbar.addEventListener('mouseleave', () => {
-    isDown = false;
-});
-
-serviceNavbar.addEventListener('mouseup', () => {
-    isDown = false;
-});
-
-serviceNavbar.addEventListener('mousemove', (e) => {
-    if (!isDown) return;
-    e.preventDefault();
-    const x = e.pageX - serviceNavbar.offsetLeft;
-    const walk = (x - startX);
-    serviceNavbar.scrollLeft = scrollLeft - walk;
-});
-
-// Add touch scroll support
-serviceNavbar.addEventListener('touchstart', (e) => {
-    startX = e.touches[0].pageX - serviceNavbar.offsetLeft;
-    scrollLeft = serviceNavbar.scrollLeft;
-});
-
-serviceNavbar.addEventListener('touchmove', (e) => {
-    if (!startX) return;
-    const x = e.touches[0].pageX - serviceNavbar.offsetLeft;
-    const walk = (x - startX);
-    serviceNavbar.scrollLeft = scrollLeft - walk;
-});
-
-
+// Hamburger menu functionality
 document.addEventListener('DOMContentLoaded', function () {
     const hamburger = document.querySelector('.hamburger');
     const authButtons = document.querySelector('.auth-buttons');
-    const loginButton = document.querySelector('.login');
-    const signupButton = document.querySelector('.signup');
-
-    // Ensure both buttons are initially visible in the auth-buttons container
-    loginButton.style.display = 'block';
-    signupButton.style.display = 'block';
 
     hamburger.addEventListener('click', function () {
         this.classList.toggle('active');
@@ -262,87 +183,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 });
-
-
-
-
-// Add search functionality for mobile search
-
-// Update search functionality for mobile search
-document.addEventListener('DOMContentLoaded', function () {
-    const searchIcon = document.querySelector('.search-icon');
-    const mobileSearch = document.querySelector('.mobile-search');
-    let isSearchOpen = false;
-
-    searchIcon.addEventListener('click', function (e) {
-        e.stopPropagation();
-        isSearchOpen = !isSearchOpen;
-
-        // Toggle visibility with smooth transition
-        if (isSearchOpen) {
-            mobileSearch.style.display = 'block';
-            // Use setTimeout to ensure display:block is applied before adding active class
-            setTimeout(() => {
-                mobileSearch.classList.add('active');
-                document.querySelector('.scnd-search-box').focus();
-            }, 10);
-        } else {
-            mobileSearch.classList.remove('active');
-            // Wait for transition to complete before hiding
-            setTimeout(() => {
-                mobileSearch.style.display = 'none';
-            }, 300); // Match this with CSS transition duration
-        }
-    });
-
-    // Close search when clicking outside
-    document.addEventListener('click', function (e) {
-        if (isSearchOpen && !mobileSearch.contains(e.target) && !searchIcon.contains(e.target)) {
-            isSearchOpen = false;
-            mobileSearch.classList.remove('active');
-            setTimeout(() => {
-                mobileSearch.style.display = 'none';
-            }, 200);
-        }
-    });
-
-    // Prevent search from closing when clicking inside
-    mobileSearch.addEventListener('click', function (e) {
-        e.stopPropagation();
-    });
-});
-
-
-
-
-
-
-// Mobile search show/hide with transition
-document.addEventListener('DOMContentLoaded', function () {
-    const searchIcon = document.querySelector('.search-icon');
-    const searchWrapper = document.querySelector('.mobile-search .search-wrapper');
-    // For color toggle
-    function toggleMobileSearch() {
-        searchIcon.classList.toggle('active');
-        searchWrapper.classList.toggle('active');
-    }
-    if (searchIcon && searchWrapper) {
-        searchIcon.addEventListener('click', toggleMobileSearch);
-        // Optional: Hide search on outside click
-        document.addEventListener('click', function (e) {
-            if (
-                searchWrapper.classList.contains('active') &&
-                !searchWrapper.contains(e.target) &&
-                !searchIcon.contains(e.target)
-            ) {
-                searchWrapper.classList.remove('active');
-                searchIcon.classList.remove('active');
-            }
-        });
-    }
-});
-
-
 
 // Image Slider Functionality
 const slides = document.querySelectorAll('.slide');
@@ -374,12 +214,7 @@ setInterval(nextSlide, 3000);
 
 showSlide(currentIndex);
 
-
-
-
-
-// ANIMATION TEXT AND IMG SLIDE 
-
+// Animation for text and image slide
 const cardContents = document.querySelectorAll('.animation');
 const reveal = () => {
     cardContents.forEach(content => {
@@ -392,137 +227,22 @@ const reveal = () => {
 reveal();
 window.addEventListener('scroll', reveal);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// DARK MODE
-
-
-
-
-
-let toggleBtn = document.getElementById('dark-mode-toggle');
-let icon = document.getElementById('theme-icon');
-
-toggleBtn.addEventListener('click', () => {
-    document.body.classList.toggle('dark-mode');
-
-    if (document.body.classList.contains('dark-mode')) {
-        icon.classList.remove('fa-sun');
-        icon.classList.add('fa-moon');
-    } else {
-        icon.classList.remove('fa-moon');
-        icon.classList.add('fa-sun');
+// Dark mode functionality
+document.addEventListener('DOMContentLoaded', function () {
+    const toggleBtn = document.getElementById('dark-mode-toggle');
+    const icon = document.getElementById('theme-icon');
+    
+    if (toggleBtn && icon) {
+        toggleBtn.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            
+            if (document.body.classList.contains('dark-mode')) {
+                icon.classList.remove('fa-sun');
+                icon.classList.add('fa-moon');
+            } else {
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
+            }
+        });
     }
 });
-
-
-
-
-
-
-// function toggleTheme(iconElement) {
-//   document.body.classList.toggle('dark-mode');
-
-//   if (document.body.classList.contains('dark-mode')) {
-//     iconElement.classList.remove('fa-sun');
-//     iconElement.classList.add('fa-moon');
-//   } else {
-//     iconElement.classList.remove('fa-moon');
-//     iconElement.classList.add('fa-sun');
-//   }
-// }
-
-
-// // Attach events to both icons
-// document.getElementById('theme-toggle-desktop').addEventListener('click', () => {
-//   toggleTheme(document.getElementById('theme-icon-desktop'));
-// });
-
-// document.getElementById('theme-toggle-mobile').addEventListener('click', () => {
-//   toggleTheme(document.getElementById('theme-icon-mobile'));
-// });
-
-
-
-
-
-//  function toggleTheme(iconElement) {
-//   document.body.classList.toggle('dark-mode');
-
-//   if (document.body.classList.contains('dark-mode')) {
-//     iconElement.classList.remove('fa-sun');
-//     iconElement.classList.add('fa-moon');
-//   } else {
-//     iconElement.classList.remove('fa-moon');
-//     iconElement.classList.add('fa-sun');
-//   }
-// }
-
-
-// // Attach events to both icons
-// document.addEventListener('DOMContentLoaded', function() {
-//   const desktopToggleBtn = document.getElementById('dark-mode-toggle-desktop');
-//   const desktopIcon = document.getElementById('theme-icon-desktop');
-//   const mobileToggleBtn = document.getElementById('dark-mode-toggle-mobile');
-//   const mobileIcon = document.getElementById('theme-icon-mobile');
-
-//   if (desktopToggleBtn && desktopIcon) {
-//     desktopToggleBtn.addEventListener('click', () => {
-//       toggleTheme(desktopIcon);
-//     });
-//   }
-
-//   if (mobileToggleBtn && mobileIcon) {
-//     mobileToggleBtn.addEventListener('click', () => {
-//       toggleTheme(mobileIcon);
-//     });
-//   }
-// });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//  const lastScrollTop = 0;
-//  navbar = document.getElementById("scroll");
-//  window.addEventListener("scroll", function() {
-//   let ScrollTop = this.window.pageYOffset || document
-//   .documentElement.scrollTop;
-//   if (ScrollTop > lastScrollTop) {
-//     navbar.classList.add("scroll-up");
-//   } else {
-//     navbar.classList.remove("scroll-up");
-//   }
-//   lastScrollTop = ScrollTop;
-// });

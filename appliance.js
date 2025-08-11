@@ -3,43 +3,43 @@
 
 // Search data mapping for services
 const searchData = {
-    "plumbing": {
-        keywords: ["plumbing", "plumber", "pipe", "leak", "drain", "faucet", "toilet", "water", "sewer", "plumbing card", "plumbing service repair" , "leaky faucet repair" , "leaking pipe fix" , "clogged drain cleaning" , "toilet repair" , "water heater installation" , "sewer line repair" , "drain cleaning" , "garbage disposal repair" , "sump pump installation"],
+  "plumbing": {
+        keywords: ["Plumbing", "Plumber", "Pipe", "Leak", "Drain", "Faucet", "Toilet", "Water", "Sewer", "Plumbing card", "Plumbing service repair", "Leaky faucet repair", "Leaking pipe fix", "Clogged drain cleaning", "Toilet repair", "Water heater installation", "Sewer line repair", "Drain cleaning", "Garbage disposal repair", "Sump pump installation"],
         page: "plumbing.html",
         cardId: "plumbing-services"
     },
     "electrical": {
-        keywords: ["electrical", "electrician", "wiring", "light", "outlet", "switch", "circuit", "electrical card", "electrical service repair" , "wiring repair" , "light fixture installation" , "outlet replacement" , "circuit breaker repair" , "ceiling fan installation" , "electrical panel upgrade" , "lighting installation" , "generator installation" , "surge protector installation" , "repair generator" , "circuit breaker repair" , "home rewiring" , "power outage fix" , "short circuit repair" , "faulty wiring" , "sparking outlet"],
+        keywords: ["Electrical", "Electrician", "Wiring", "Light", "Outlet", "Switch", "Circuit", "Electrical card", "Electrical service repair", "Wiring repair", "Light fixture installation", "Outlet replacement", "Circuit breaker repair", "Ceiling fan installation", "Electrical panel upgrade", "Lighting installation", "Generator installation", "Surge protector installation", "Repair generator", "Circuit breaker repair", "Home rewiring", "Power outage fix", "Short circuit repair", "Faulty wiring", "Sparking outlet"],
         page: "electrical.html",
         cardId: "electrical-services"
     },
     "house cleaning": {
-        keywords: ["house cleaning", "cleaning", "maid", "housekeeper", "clean", "tidy", "house cleaning card", "cleaning service" , "housekeeping service", "deep cleaning", "carpet cleaning", "window washing", "post-construction cleaning", "move-in/move-out cleaning", "office cleaning", "janitorial service", "spring cleaning", "disinfection service"],
+        keywords: ["House cleaning", "Cleaning", "Maid", "Housekeeper", "Clean", "Tidy", "House cleaning card", "Cleaning service", "Housekeeping service", "Deep cleaning", "Carpet cleaning", "Window washing", "Post-construction cleaning", "Move-in/move-out cleaning", "Office cleaning", "Janitorial service", "Spring cleaning", "Disinfection service"],
         page: "house-cleaning.html",
         cardId: "cleaning-services"
     },
     "bike repair": {
-        keywords: ["bike repair", "bicycle", "cycle", "bike", "repair", "tire", "bike repair card", "bicycle service" , "bike maintenance", "flat tire repair", "brake adjustment", "gear tuning", "chain replacement", "wheel truing", "bike assembly", "bike fitting", "bike cleaning", "bike tune-up"],
+        keywords: ["Bike repair", "Bicycle", "Cycle", "Bike", "Repair", "Tire", "Bike repair card", "Bicycle service", "Bike maintenance", "Flat tire repair", "Brake adjustment", "Gear tuning", "Chain replacement", "Wheel truing", "Bike assembly", "Bike fitting", "Bike cleaning", "Bike tune-up"],
         page: "bike-repair.html",
         cardId: "bike-repair-services"
     },
     "carpentry": {
-        keywords: ["carpentry", "carpenter", "wood", "furniture", "cabinet", "carpentry card", "woodwork service" , "furniture assembly", "cabinet installation", "shelving", "deck building", "fence installation", "custom woodwork", "door installation", "window framing", "wood repair", "trim work", "wooden furniture restoration"],
+        keywords: ["Carpentry", "Carpenter", "Wood", "Furniture", "Cabinet", "Carpentry card", "Woodwork service", "Furniture assembly", "Cabinet installation", "Shelving", "Deck building", "Fence installation", "Custom woodwork", "Door installation", "Window framing", "Wood repair", "Trim work", "Wooden furniture restoration"],
         page: "carpentry.html",
         cardId: "carpentry-services"
     },
     "car repair": {
-        keywords: ["car repair", "automobile", "mechanic", "auto", "vehicle", "car repair card", "automotive service" , "engine repair", "brake service", "oil change", "tire rotation", "transmission repair", "battery replacement", "exhaust system repair", "suspension service", "cooling system repair", "car diagnostics", "vehicle maintenance"],
+        keywords: ["Car repair", "Automobile", "Mechanic", "Auto", "Vehicle", "Car repair card", "Automotive service", "Engine repair", "Brake service", "Oil change", "Tire rotation", "Transmission repair", "Battery replacement", "Exhaust system repair", "Suspension service", "Cooling system repair", "Car diagnostics", "Vehicle maintenance"],
         page: "car-repair.html",
         cardId: "car-repair-services"
     },
     "moving": {
-        keywords: ["moving", "move", "movers", "relocation", "packing", "moving card", "moving service" , "local moving", "long-distance moving", "packing service", "unpacking service", "furniture assembly", "storage solutions", "office relocation", "residential moving", "piano moving", "appliance moving", "heavy item moving", "moving truck rental"],
+        keywords: ["Moving", "Move", "Movers", "Relocation", "Packing", "Moving card", "Moving service", "Local moving", "Long-distance moving", "Packing service", "Unpacking service", "Furniture assembly", "Storage solutions", "Office relocation", "Residential moving", "Piano moving", "Appliance moving", "Heavy item moving", "Moving truck rental"],
         page: "moving.html",
         cardId: "moving-services"
     },
     "appliance": {
-        keywords: ["appliance", "appliances", "fridge", "washing machine", "dryer", "appliance card", "appliance repair" , "toilet installation" , "sink installation" , "bathtub repair" , "shower head replacement" , "water softener installation" , "garbage disposal installation" , "dishwasher repair" , "water heater repair" , "faucet installation" , "pipe insulation", "appliance installation", "appliance maintenance", "appliance troubleshooting"],
+        keywords: ["Appliance", "Appliances", "Fridge", "Washing machine", "Dryer", "Appliance card", "Appliance repair", "Toilet installation", "Sink installation", "Bathtub repair", "Shower head replacement", "Water softener installation", "Garbage disposal installation", "Dishwasher repair", "Water heater repair", "Faucet installation", "Pipe insulation", "Appliance installation", "Appliance maintenance", "Appliance troubleshooting"],
         page: "appliance.html",
         cardId: "appliance-services"
     }

@@ -251,94 +251,166 @@ document.addEventListener('DOMContentLoaded', initDarkMode);
 
 
 
-// function toggleTheme(iconElement) {
-//   document.body.classList.toggle('dark-mode');
+ // Search functionality for .top-navbar input field
+// This script adds search capability to navigate to specific service cards
 
-//   if (document.body.classList.contains('dark-mode')) {
-//     iconElement.classList.remove('fa-sun');
-//     iconElement.classList.add('fa-moon');
-//   } else {
-//     iconElement.classList.remove('fa-moon');
-//     iconElement.classList.add('fa-sun');
-//   }
-// }
+// Search data mapping for services
+const searchData = {
+    "plumbing": {
+        keywords: ["Plumbing", "Plumber", "Pipe", "Leak", "Drain", "Faucet", "Toilet", "Water", "Sewer", "Plumbing card", "Plumbing service repair", "Leaky faucet repair", "Leaking pipe fix", "Clogged drain cleaning", "Toilet repair", "Water heater installation", "Sewer line repair", "Drain cleaning", "Garbage disposal repair", "Sump pump installation"],
+        page: "plumbing.html",
+        cardId: "plumbing-services"
+    },
+    "electrical": {
+        keywords: ["Electrical", "Electrician", "Wiring", "Light", "Outlet", "Switch", "Circuit", "Electrical card", "Electrical service repair", "Wiring repair", "Light fixture installation", "Outlet replacement", "Circuit breaker repair", "Ceiling fan installation", "Electrical panel upgrade", "Lighting installation", "Generator installation", "Surge protector installation", "Repair generator", "Circuit breaker repair", "Home rewiring", "Power outage fix", "Short circuit repair", "Faulty wiring", "Sparking outlet"],
+        page: "electrical.html",
+        cardId: "electrical-services"
+    },
+    "house cleaning": {
+        keywords: ["House cleaning", "Cleaning", "Maid", "Housekeeper", "Clean", "Tidy", "House cleaning card", "Cleaning service", "Housekeeping service", "Deep cleaning", "Carpet cleaning", "Window washing", "Post-construction cleaning", "Move-in/move-out cleaning", "Office cleaning", "Janitorial service", "Spring cleaning", "Disinfection service"],
+        page: "house-cleaning.html",
+        cardId: "cleaning-services"
+    },
+    "bike repair": {
+        keywords: ["Bike repair", "Bicycle", "Cycle", "Bike", "Repair", "Tire", "Bike repair card", "Bicycle service", "Bike maintenance", "Flat tire repair", "Brake adjustment", "Gear tuning", "Chain replacement", "Wheel truing", "Bike assembly", "Bike fitting", "Bike cleaning", "Bike tune-up"],
+        page: "bike-repair.html",
+        cardId: "bike-repair-services"
+    },
+    "carpentry": {
+        keywords: ["Carpentry", "Carpenter", "Wood", "Furniture", "Cabinet", "Carpentry card", "Woodwork service", "Furniture assembly", "Cabinet installation", "Shelving", "Deck building", "Fence installation", "Custom woodwork", "Door installation", "Window framing", "Wood repair", "Trim work", "Wooden furniture restoration"],
+        page: "carpentry.html",
+        cardId: "carpentry-services"
+    },
+    "car repair": {
+        keywords: ["Car repair", "Automobile", "Mechanic", "Auto", "Vehicle", "Car repair card", "Automotive service", "Engine repair", "Brake service", "Oil change", "Tire rotation", "Transmission repair", "Battery replacement", "Exhaust system repair", "Suspension service", "Cooling system repair", "Car diagnostics", "Vehicle maintenance"],
+        page: "car-repair.html",
+        cardId: "car-repair-services"
+    },
+    "moving": {
+        keywords: ["Moving", "Move", "Movers", "Relocation", "Packing", "Moving card", "Moving service", "Local moving", "Long-distance moving", "Packing service", "Unpacking service", "Furniture assembly", "Storage solutions", "Office relocation", "Residential moving", "Piano moving", "Appliance moving", "Heavy item moving", "Moving truck rental"],
+        page: "moving.html",
+        cardId: "moving-services"
+    },
+    "appliance": {
+        keywords: ["Appliance", "Appliances", "Fridge", "Washing machine", "Dryer", "Appliance card", "Appliance repair", "Toilet installation", "Sink installation", "Bathtub repair", "Shower head replacement", "Water softener installation", "Garbage disposal installation", "Dishwasher repair", "Water heater repair", "Faucet installation", "Pipe insulation", "Appliance installation", "Appliance maintenance", "Appliance troubleshooting"],
+        page: "appliance.html",
+        cardId: "appliance-services"
+    }
+};
 
+// Function to find matching service
+function findMatchingService(query) {
+    const lowerQuery = query.toLowerCase().trim();
+    
+    for (const [serviceKey, service] of Object.entries(searchData)) {
+        for (const keyword of service.keywords) {
+            if (lowerQuery.includes(keyword.toLowerCase())) {
+                return service;
+            }
+        }
+    }
+    
+    return null;
+}
 
-// // Attach events to both icons
-// document.getElementById('theme-toggle-desktop').addEventListener('click', () => {
-//   toggleTheme(document.getElementById('theme-icon-desktop'));
-// });
+// Function to perform search
+function performSearch(query) {
+    const service = findMatchingService(query);
+    
+    if (service) {
+        // Navigate to the service page with the card ID as anchor
+        const targetUrl = `${service.page}#${service.cardId}`;
+        window.location.href = targetUrl;
+    } else {
+        // Show no results message
+        alert("No matching service found. Please try different keywords like 'plumbing', 'electrical', 'cleaning', etc.");
+    }
+}
 
-// document.getElementById('theme-toggle-mobile').addEventListener('click', () => {
-//   toggleTheme(document.getElementById('theme-icon-mobile'));
-// });
+// Initialize search functionality
+function initializeSearch() {
+    // Desktop search
+    const desktopSearchInput = document.querySelector('.search-box input[type="text"]');
+    const desktopSearchBtn = document.querySelector('.search-icon');
+    
+    // Mobile search
+    const mobileSearchInput = document.querySelector('.mobile-search input[type="text"]');
+    const mobileSearchBtn = document.querySelector('.search-btn');
+    
+    // Function to handle search
+    function handleSearch(input) {
+        const query = input.value.trim();
+        if (query) {
+            performSearch(query);
+        }
+    }
+    
+    // Event listeners for desktop
+    if (desktopSearchInput) {
+        desktopSearchInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                handleSearch(desktopSearchInput);
+            }
+        });
+    }
+    
+    if (desktopSearchBtn) {
+        desktopSearchBtn.addEventListener('click', () => {
+            if (desktopSearchInput) {
+                handleSearch(desktopSearchInput);
+            }
+        });
+    }
+    
+    // Event listeners for mobile
+    if (mobileSearchInput) {
+        mobileSearchInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                handleSearch(mobileSearchInput);
+            }
+        });
+    }
+    
+    if (mobileSearchBtn) {
+        mobileSearchBtn.addEventListener('click', () => {
+            if (mobileSearchInput) {
+                handleSearch(mobileSearchInput);
+            }
+        });
+    }
+}
 
+// Initialize search when DOM is loaded
+document.addEventListener('DOMContentLoaded', () => {
+    initializeSearch();
+    
+    // Add IDs to service sections on service pages
+    addServiceSectionIDs();
+});
 
-
-
-
-//  function toggleTheme(iconElement) {
-//   document.body.classList.toggle('dark-mode');
-
-//   if (document.body.classList.contains('dark-mode')) {
-//     iconElement.classList.remove('fa-sun');
-//     iconElement.classList.add('fa-moon');
-//   } else {
-//     iconElement.classList.remove('fa-moon');
-//     iconElement.classList.add('fa-sun');
-//   }
-// }
-
-
-// // Attach events to both icons
-// document.addEventListener('DOMContentLoaded', function() {
-//   const desktopToggleBtn = document.getElementById('dark-mode-toggle-desktop');
-//   const desktopIcon = document.getElementById('theme-icon-desktop');
-//   const mobileToggleBtn = document.getElementById('dark-mode-toggle-mobile');
-//   const mobileIcon = document.getElementById('theme-icon-mobile');
-
-//   if (desktopToggleBtn && desktopIcon) {
-//     desktopToggleBtn.addEventListener('click', () => {
-//       toggleTheme(desktopIcon);
-//     });
-//   }
-
-//   if (mobileToggleBtn && mobileIcon) {
-//     mobileToggleBtn.addEventListener('click', () => {
-//       toggleTheme(mobileIcon);
-//     });
-//   }
-// });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//  const lastScrollTop = 0;
-//  navbar = document.getElementById("scroll");
-//  window.addEventListener("scroll", function() {
-//   let ScrollTop = this.window.pageYOffset || document
-//   .documentElement.scrollTop;
-//   if (ScrollTop > lastScrollTop) {
-//     navbar.classList.add("scroll-up");
-//   } else {
-//     navbar.classList.remove("scroll-up");
-//   }
-//   lastScrollTop = ScrollTop;
-// });
+// Function to add IDs to service sections on service pages
+function addServiceSectionIDs() {
+    const currentPage = window.location.pathname.split('/').pop();
+    
+    // Map pages to their service section IDs
+    const pageServiceMap = {
+        'plumbing.html': 'plumbing-services',
+        'electrical.html': 'electrical-services',
+        'house-cleaning.html': 'cleaning-services',
+        'bike-repair.html': 'bike-repair-services',
+        'carpentry.html': 'carpentry-services',
+        'car-repair.html': 'car-repair-services',
+        'moving.html': 'moving-services',
+        'appliance.html': 'appliance-services'
+    };
+    
+    // Add ID to the main service section on each page
+    if (pageServiceMap[currentPage]) {
+        const serviceSection = document.querySelector('.service-section') || 
+                              document.querySelector('.services-section') || 
+                              document.querySelector('.main-content');
+        if (serviceSection && !serviceSection.id) {
+            serviceSection.id = pageServiceMap[currentPage];
+        }
+    }
+}
