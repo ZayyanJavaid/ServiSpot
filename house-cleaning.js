@@ -184,51 +184,7 @@ window.addEventListener('load', () => {
 
 
 
-
-
-
-
-
-// Add smooth scroll for service navbar
-const serviceNavbar = document.querySelector('.service-navbar');
-let isDown = false;
-let startX;
-let scrollLeft;
-
-serviceNavbar.addEventListener('mousedown', (e) => {
-    isDown = true;
-    startX = e.pageX - serviceNavbar.offsetLeft;
-    scrollLeft = serviceNavbar.scrollLeft;
-});
-
-serviceNavbar.addEventListener('mouseleave', () => {
-    isDown = false;
-});
-
-serviceNavbar.addEventListener('mouseup', () => {
-    isDown = false;
-});
-
-serviceNavbar.addEventListener('mousemove', (e) => {
-    if (!isDown) return;
-    e.preventDefault();
-    const x = e.pageX - serviceNavbar.offsetLeft;
-    const walk = (x - startX);
-    serviceNavbar.scrollLeft = scrollLeft - walk;
-});
-
-// Add touch scroll support
-serviceNavbar.addEventListener('touchstart', (e) => {
-    startX = e.touches[0].pageX - serviceNavbar.offsetLeft;
-    scrollLeft = serviceNavbar.scrollLeft;
-});
-
-serviceNavbar.addEventListener('touchmove', (e) => {
-    if (!startX) return;
-    const x = e.touches[0].pageX - serviceNavbar.offsetLeft;
-    const walk = (x - startX);
-    serviceNavbar.scrollLeft = scrollLeft - walk;
-});
+ 
 
 
 document.addEventListener('DOMContentLoaded', function() {
