@@ -1730,6 +1730,10 @@ body.dark-mode .info-item i {
     color: white !important;
 }
 
+body.dark-mode .about-text h2 {
+    color: white !important;
+}
+
 body.dark-mode .info-item h3 {
     color: white !important;
 }
